@@ -1,4 +1,4 @@
-# CSE 15L Lab Reports
+# CSE 15L
 ## Trying out random stuff in Markdown
 Hello world
 
