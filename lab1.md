@@ -62,10 +62,41 @@ Hello.java
 
 ---
 
-## Part 3: `ls`
+## Part 3: `cat`
 
 ### 1. No arguments
+* Working directory: `/home/lecture1`
+```
+$ cat
+some text
+some text
+```
+* There was no output and it seemed like the terminal was waiting for the user to complete the prompt.
+* Then, anything I entered got repeated as an output. 
+* When there is no argument, it seems like `cat` simply takes the input and prints it as output.
+* There was not an error.
 
 ### 2. Path to directory as argument
+* Working directory: `/home/lecture1`
+```
+$ cat messages
+cat: messages: Is a directory
+```
+* `messages` refers to the directory at `/home/lecture1/messages`.
+* The output was an error message. Since `messages` is a directory, there is no text to concatenate. 
 
 ### 3. Path to file as argument
+* Working directory: `/home/lecture1/messages`
+```
+$ cat en-us.txt 
+Hello World!
+```
+* The text in `/home/lecture1/messages/en-us.txt` was printed. If there were multiple files as arguments, they would be concatenated and printed one after the other. But since there was just one file as an argument, the text in `en-us.txt` was simply outputted.
+* There was no error.
+
+Here is an example of multiple files being concatenated:
+```
+$ cat en-us.txt es-mx.txt 
+Hello World!
+¡Hola Mundo!
+```
