@@ -1,6 +1,11 @@
 # Lab Report 1: Jan 16, 2024
+In this lab, I ran 3 common terminal commands (`cd`, `ls`, and `cat`) with either no arguments, a path to a directory as an argument, or a path to a file as an argument. I ran these commands in an Edstem workspace where I had cloned the lecture1 repository. These are my observations. 
 
-## Part 1: `cd`
+* [Part 1: `cd`](#cd)
+* [Part 2: `ls`](#ls)
+* [Part 3: `cat`](#cat)
+
+## Part 1: `cd` <a name="cd"></a>
 
 ### 1. No arguments
 * Working directory: `/home/lecture1`
@@ -31,7 +36,7 @@ So, there is an error saying that the file is not a directory.
 
 ---
 
-## Part 2: `ls`
+## Part 2: `ls` <a name="ls"></a>
 
 ### 1. No arguments
 * Working directory: `/home/lecture1`
@@ -62,7 +67,7 @@ Hello.java
 
 ---
 
-## Part 3: `cat`
+## Part 3: `cat` <a name="cat"></a>
 
 ### 1. No arguments
 * Working directory: `/home/lecture1`
