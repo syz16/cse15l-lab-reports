@@ -7,7 +7,8 @@
 ## Part 1: ChatServer <a name="part-1"></a>
 My home directory on EdStem has one subdirectory, `wavelet`. These are the files inside `wavelet`:
 ```
-ChatServer.class  ChatServer.java  Handler.class  README.md  Server.class  ServerHttpHandler.class  Server.java  URLHandler.class
+ChatServer.class  ChatServer.java  Handler.class  README.md  Server.class  ServerHttpHandler.class
+Server.java  URLHandler.class
 ```
 
 Here is the code inside `ChatServer.java`:
@@ -74,8 +75,8 @@ class ChatServer {
 
 <img src="./img/ls-keys.png" alt="ssh key files are in .ssh directory" width="300"/>
 
-* __Private__ key on my computer: /Users/sophiazhu/.ssh/id_rsa
-* __Public__ key on `ieng6` remote server: /home/linux/ieng6/oce/8o/soz007/.ssh/authorized_keys
+* __Private__ key on my computer: `/Users/sophiazhu/.ssh/id_rsa`
+* __Public__ key on `ieng6` remote server: `/home/linux/ieng6/oce/8o/soz007/.ssh/authorized_keys`
 
 This screenshot shows that I can log in without entering my password:
 
