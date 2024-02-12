@@ -73,10 +73,13 @@ class ChatServer {
 
 ## Part 2: Logging in to `ieng6` <a name="part-2"></a>
 
-<img src="./img/ls-keys.png" alt="ssh key files are in .ssh directory" width="300"/>
-
 * __Private__ key on my computer: `/Users/sophiazhu/.ssh/id_rsa`
+
+<img src="./img/local-keys.png" alt="local ssh key files are in .ssh directory" width="300"/>
+
 * __Public__ key on `ieng6` remote server: `/home/linux/ieng6/oce/8o/soz007/.ssh/authorized_keys`
+
+<img src="./img/remote-keys.png" alt="remote ssh key files are in .ssh directory" width="300"/>
 
 This screenshot shows that I can log in without entering my password:
 
