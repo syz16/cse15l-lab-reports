@@ -73,11 +73,11 @@ class ChatServer {
 
 ## Part 2: Logging in to `ieng6` <a name="part-2"></a>
 
-* __Private__ key on my computer: `/Users/sophiazhu/.ssh/id_rsa`
+__Private__ key on my computer: `/Users/sophiazhu/.ssh/id_rsa`
 
-<img src="./img/local-keys.png" alt="local ssh key files are in .ssh directory" width="300"/>
+<img src="./img/local-keys.png" alt="local ssh key files are in .ssh directory" width="400"/>
 
-* __Public__ key on `ieng6` remote server: `/home/linux/ieng6/oce/8o/soz007/.ssh/authorized_keys`
+__Public__ key on `ieng6` remote server: `/home/linux/ieng6/oce/8o/soz007/.ssh/authorized_keys`
 
 <img src="./img/remote-keys.png" alt="remote ssh key files are in .ssh directory" width="300"/>
 
