@@ -86,7 +86,7 @@ The working directory is the `docsearch` directory.
     ...
     ```
   * This code lists all directories in the `government` directory and associated info. One thing it is useful for is seeing the permissions of each subdirectory.
-    ```
+    ```console
     $ find technical/government -type d -ls 
     17460172        0 drwxr-xr-x    8 sophiazhu        staff                 256 Feb  8 14:16 technical/government
     17460173        0 drwxr-xr-x   19 sophiazhu        staff                 608 Feb  8 14:16 technical/government/About_LSC
@@ -113,7 +113,7 @@ The working directory is the `docsearch` directory.
     ```
 4. `-maxdepth` (Source: [redhat.com](https://www.redhat.com/sysadmin/linux-find-command))
   * This command finds all directories that are in the `technical` directory, with a max depth of 2. This is useful for finding the subdirectories closest to the parent directory, without having to look through a super long list of every single subdirectory. 
-    ```
+    ```console
     $ find technical -maxdepth 2 -type d
     technical
     technical/government
@@ -122,7 +122,7 @@ The working directory is the `docsearch` directory.
     ...
     ```
   * This command finds all files and directories that are directly inside the `911 report directory`. This is useful if you want to ignore the contents of any subdirectories and only look for things directly inside the parent directory. 
-    ```
+    ```console
     $ find technical/911report -maxdepth 1
     technical/911report
     technical/911report/chapter-13.4.txt
