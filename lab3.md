@@ -58,16 +58,18 @@
 
 ## Part 2: Researching Commands <a name="part-2"></a>
 
-I am researching the command `find`. I found this [link from redhat.com](https://www.redhat.com/sysadmin/linux-find-command) that describes some different options. I used `man find` to look up more details.
+I am researching the command `find`. I found this [link from redhat.com](https://www.redhat.com/sysadmin/linux-find-command) that describes some different options. I used `man find` to look up more details. 
+
+The working directory is the `docsearch` directory.
 
 1. `-name` allows you to find files by name
   * This code finds the location of a file named `chapter-1.txt`, which is useful if you know a file name but don't know or don't remember where it is stored. 
-    ```
+    ```console
     $ find technical -name "chapter-1.txt"
     technical/911report/chapter-1.txt
     ```
   * This code finds the location of all files with names matching the pattern `Session*-PDF.txt`. This is useful for finding multiple files with a similar name, or if you want to find a file and don't remember the exact name.
-    ```
+    ```console
     $ find technical -name "Session*-PDF.txt"
     technical/government/Alcohol_Problems/Session2-PDF.txt
     technical/government/Alcohol_Problems/Session3-PDF.txt
@@ -75,7 +77,7 @@ I am researching the command `find`. I found this [link from redhat.com](https:/
     ```
 2. `-ls` lists all files and directories along with information about each one. 
   * This code lists all files and directories in the `government` directory and associated info. It is useful for seeing file size, file permissions, owner, etc. 
-    ```
+    ```console
     $ find technical/government -ls
     17460172        0 drwxr-xr-x    8 sophiazhu        staff                 256 Feb  8 14:16 technical/government
     17460173        0 drwxr-xr-x   19 sophiazhu        staff                 608 Feb  8 14:16 technical/government/About_LSC
@@ -85,8 +87,40 @@ I am researching the command `find`. I found this [link from redhat.com](https:/
     ```
   * Example 2
 3. `-type`
-  * Example 1
-  * Example 2
-4. sdfsdfds
-  * Example 1
-  * Example 2
+  * This code finds all files in the `government` directory, which is useful to 
+    ```console
+    $ find technical/government -type f 
+    technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
+    technical/government/About_LSC/Progress_report.txt
+    technical/government/About_LSC/Strategic_report.txt
+    technical/government/About_LSC/Comments_on_semiannual.txt
+    ...
+    ```
+  * This code finds all directories in the `government` directory, which is useful to see the structure of the directories. 
+    ```console
+    $ find technical/government -type d
+    technical/government
+    technical/government/About_LSC
+    technical/government/Env_Prot_Agen
+    technical/government/Alcohol_Problems
+    ...
+    ```
+4. `-maxdepth` (Source: [redhat.com](https://www.redhat.com/sysadmin/linux-find-command))
+  * This command finds all directories that are in the `technical` directory, with a max depth of 2. This is useful for finding the subdirectories closest to the parent directory, without having to look through a super long list of every single subdirectory. 
+    ```
+    $ find technical -maxdepth 2 -type d
+    technical
+    technical/government
+    technical/government/About_LSC
+    technical/government/Env_Prot_Agen
+    ...
+    ```
+  * This command finds all files and directories that are directly inside the `911 report directory`. This is useful if you want to ignore the contents of any subdirectories and only look for things directly inside the parent directory. 
+    ```
+    $ find technical/911report -maxdepth 1
+    technical/911report
+    technical/911report/chapter-13.4.txt
+    technical/911report/chapter-13.5.txt
+    ```
+
+
