@@ -62,7 +62,7 @@ I am researching the command `find`. I found this [link from redhat.com](https:/
 
 The working directory is the `docsearch` directory.
 
-1. `-name` allows you to find files by name
+1. `-name` (Source: [redhat.com](https://www.redhat.com/sysadmin/linux-find-command))
   * This code finds the location of a file named `chapter-1.txt`, which is useful if you know a file name but don't know or don't remember where it is stored. 
     ```console
     $ find technical -name "chapter-1.txt"
@@ -75,7 +75,7 @@ The working directory is the `docsearch` directory.
     technical/government/Alcohol_Problems/Session3-PDF.txt
     technical/government/Alcohol_Problems/Session4-PDF.txt
     ```
-2. `-ls` lists all files and directories along with information about each one. 
+2. `-ls` (Source: [redhat.com](https://www.redhat.com/sysadmin/linux-find-command))
   * This code lists all files and directories in the `government` directory and associated info. It is useful for seeing file size, file permissions, owner, etc. 
     ```console
     $ find technical/government -ls
@@ -85,8 +85,14 @@ The working directory is the `docsearch` directory.
     17460181       96 -rwxr-xr-x    1 sophiazhu        staff               47991 Feb  8 14:16 technical/government/About_LSC/Progress_report.txt
     ...
     ```
-  * Example 2
-3. `-type`
+  * This code lists all directories in the `government` directory and associated info. One thing it is useful for is seeing the permissions of each subdirectory.
+    ```
+    $ find technical/government -type d -ls 
+    17460172        0 drwxr-xr-x    8 sophiazhu        staff                 256 Feb  8 14:16 technical/government
+    17460173        0 drwxr-xr-x   19 sophiazhu        staff                 608 Feb  8 14:16 technical/government/About_LSC
+    17460196        0 drwxr-xr-x   16 sophiazhu        staff                 512 Feb  8 14:16 technical/government/Env_Prot_Agen
+    ```
+3. `-type` (Source: [redhat.com](https://www.redhat.com/sysadmin/linux-find-command))
   * This code finds all files in the `government` directory, which is useful to 
     ```console
     $ find technical/government -type f 
