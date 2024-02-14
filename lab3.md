@@ -93,7 +93,7 @@ The working directory is the `docsearch` directory.
     17460196        0 drwxr-xr-x   16 sophiazhu        staff                 512 Feb  8 14:16 technical/government/Env_Prot_Agen
     ```
 3. `-type` (Source: [redhat.com](https://www.redhat.com/sysadmin/linux-find-command))
-  * This code finds all files in the `government` directory, which is useful to 
+  * This code finds all files in the `government` directory, which is useful if you only want the files and not the directories.
     ```console
     $ find technical/government -type f 
     technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
